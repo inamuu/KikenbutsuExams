@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>危険物丙種トレーナー</title>
+    <meta
+      name="description"
+      content="危険物取扱者丙種の公開問題論点をもとにした、解説付きランダム出題サイト。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero card">
+        <p class="eyebrow">Kikenbutsu Class C Trainer</p>
+        <h1>危険物丙種トレーナー</h1>
+        <p class="hero-copy">
+          手元の公開問題 PDF を解析し、論点だけを再構成したオリジナル練習サイトです。
+          5問、10問、20問を選んで、毎回ランダムな順番で解けます。
+        </p>
+        <div class="hero-stats" id="hero-stats"></div>
+      </header>
+
+      <main class="layout">
+        <section class="control-panel card">
+          <div class="panel-heading">
+            <p class="section-kicker">Setting</p>
+            <h2>出題設定</h2>
+          </div>
+
+          <label class="field">
+            <span>年度</span>
+            <select id="year-select"></select>
+          </label>
+
+          <label class="field">
+            <span>問題数</span>
+            <select id="count-select"></select>
+          </label>
+
+          <p class="exam-description" id="exam-description"></p>
+          <button class="primary-button" id="start-button" type="button">ランダム出題を開始</button>
+        </section>
+
+        <section class="analysis-panel card">
+          <div class="panel-heading">
+            <p class="section-kicker">Analysis</p>
+            <h2>PDF 解析状況</h2>
+          </div>
+          <div id="source-summary" class="source-summary"></div>
+          <p class="research-note" id="research-note"></p>
+          <p class="policy-note">
+            公開元 PDF の問題文は二次利用制限を考慮し、サイトには掲載していません。
+            学習用には、同じ論点を扱うオリジナル問題を掲載しています。
+          </p>
+        </section>
+
+        <section class="quiz-panel card" id="quiz-root" aria-live="polite"></section>
+      </main>
+
+      <footer class="footer">
+        Build <span id="build-date">__BUILD_DATE__</span>
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+

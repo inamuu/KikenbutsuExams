@@ -1,0 +1,12 @@
+{
+  "name": "kikenbutsu-exams",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "analyze:pdf": ".venv/bin/python scripts/analyze_pdfs.py --out generated/source-analysis.local.json",
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/app.js && node --check scripts/build.mjs"
+  }
+}
+
